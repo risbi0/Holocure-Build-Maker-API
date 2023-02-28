@@ -28,7 +28,7 @@ let redisClient;
 
 const corsOptions = process.env.NODE_ENV === 'development' ? cors() : cors({origin: 'https://risbi0.github.io'});
 
-const logger = morgan('[:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] ":user-agent"');
+const logger = morgan(':remote-addr - ":method :url HTTP/:http-version" :status :res[content-length] ":user-agent"');
 
 const limiter = rateLimit({
     windowMs: 1000,
