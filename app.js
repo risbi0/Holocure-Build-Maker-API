@@ -26,7 +26,7 @@ let redisClient;
     await redisClient.connect();
 })();
 
-const corsOptions = process.env.NODE_ENV === 'development' ? cors() : cors({origin: 'https://risbi0.github.io'});
+const corsOptions = process.env.NODE_ENV === 'development' ? cors() : cors({origin: 'https://holocure-build-maker.vercel.app'});
 
 const logger = morgan('":method :url HTTP/:http-version" :status :res[content-length] ":user-agent"');
 
